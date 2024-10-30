@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,9 +8,14 @@
     <title>Juego de Ahorcado</title>
     <link rel="stylesheet" href="hangman.css">
 </head>
+
 <body>
+    <!-- Contenedor para cargar el navbar -->
+    <div id="navbar-placeholder"></div>
+
     <div class="game-container">
         <h1>Juego de Ahorcado</h1>
+        <canvas id="hangmanCanvas" width="200" height="200"></canvas>
         <p id="hint"></p>
         <p id="wordDisplay">_ _ _ _ _</p>
         <p id="message"></p>
