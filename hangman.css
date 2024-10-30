@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #fbeaec;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    color: #ff4081;
+}
+
+#wordDisplay {
+    font-size: 2em;
+    letter-spacing: 0.5em;
+}
+
+#letters button {
+    font-size: 1.5em;
+    margin: 5px;
+}
+
+#message {
+    font-size: 1.2em;
+    color: #ff4081;
+    margin-top: 20px;
+}
