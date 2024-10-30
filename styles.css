@@ -1,60 +1,83 @@
-/* Barra de navegación */
+/* Estilos básicos de la página */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFEEF0;
+    font-family: Arial, sans-serif;
+    color: #ff69b4;
+}
+
+/* Barra de Navegación */
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #ff69b4;
-    color: #fff;
+    justify-content: center;
+    background-color: #ff4081;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-.navbar h1 {
-    font-size: 1.5em;
-    margin: 0;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.nav-links a {
-    color: #fff;
+.nav-link {
+    color: #ffffff;
+    margin: 0 15px;
     text-decoration: none;
-    font-size: 1em;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-/* Contenido principal */
-.main-content {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.main-content h2 {
-    color: #ff4081;
-    font-size: 2em;
-}
-
-.main-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.main-content li {
-    margin: 10px 0;
-}
-
-.main-content a {
-    color: #ff4081;
     font-size: 1.2em;
-    text-decoration: none;
 }
 
-.main-content a:hover {
-    text-decoration: underline;
+.nav-link:hover {
+    color: #ffccde;
+}
+
+/* Frase principal */
+h1 {
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    color: #ff4081;
+    z-index: 1;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Animación de entrada para el texto */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo de los corazones */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff69b4;
+    transform: rotate(45deg);
+    animation: fall 5s infinite;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+/* Creando la forma de corazón */
+.heart:before, .heart:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+}
+
+.heart:before { top: -10px; left: 0; }
+.heart:after { top: 0; left: -10px; }
+
+/* Animación de caída */
+@keyframes fall {
+    0% { transform: translateY(-100vh) rotate(45deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(45deg); opacity: 0; }
 }
