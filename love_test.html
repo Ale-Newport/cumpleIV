@@ -19,6 +19,14 @@
         <p id="result-message"></p>
         <button id="next-btn" onclick="loadNextQuestion()">Siguiente</button>
     </div>
+
+    <!-- Script para cargar el navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+    </script>
+    
     <script src="love_test.js"></script>
 </body>
 </html>

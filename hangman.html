@@ -21,6 +21,13 @@
         <p id="message"></p>
         <div id="letters"></div>
     </div>
+    <!-- Script para cargar el navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+    </script>
+
     <script src="hangman.js"></script>
 </body>
 </html>
