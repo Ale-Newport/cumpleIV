@@ -63,10 +63,15 @@ h1 {
 /* Letras */
 #letters {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.keyboard-row {
+    display: flex;
     justify-content: center;
     gap: 5px;
-    margin-top: 10px;
 }
 
 #letters button {

@@ -1,7 +1,7 @@
 const words = [
-    { word: "amor", hint: "Lo que sentimos" },
-    { word: "felicidad", hint: "Estado ideal contigo" },
-    { word: "abrazo", hint: "Nos encanta darlo" }
+    { word: "jappy", hint: "el nombre de uno de mis primeros regalos" },
+    { word: "paris", hint: "primer viaje solos" },
+    { word: "pupu", hint: "apodo que me quieres llamar" }
 ];
 let chosenWordObj, chosenWord, displayWord, attempts, guessedLetters;
 
@@ -13,7 +13,7 @@ function initializeGame() {
     guessedLetters = [];
 
     document.getElementById("wordDisplay").innerText = displayWord;
-    document.getElementById("hint").innerText = `Pista: ${chosenWordObj.hint}`;
+    document.getElementById("hint").innerText = "";
     document.getElementById("message").innerText = "";
     document.getElementById("restartButton").style.display = "none";
     document.getElementById("letters").innerHTML = "";
@@ -22,14 +22,24 @@ function initializeGame() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBaseStructure();
 
-    // Create letter buttons
-    for (let i = 0; i < 26; i++) {
-        const letter = String.fromCharCode(65 + i).toLowerCase();
-        const button = document.createElement("button");
-        button.innerText = letter;
-        button.onclick = () => handleLetterClick(button, letter);
-        document.getElementById("letters").appendChild(button);
-    }
+    // Crear teclas en tres filas como en un teclado en español
+    const rows = [
+        ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
+        ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ñ"],
+        ["z", "x", "c", "v", "b", "n", "m"]
+    ];
+
+    rows.forEach(row => {
+        const rowDiv = document.createElement("div");
+        rowDiv.classList.add("keyboard-row");
+        row.forEach(letter => {
+            const button = document.createElement("button");
+            button.innerText = letter;
+            button.onclick = () => handleLetterClick(button, letter);
+            rowDiv.appendChild(button);
+        });
+        document.getElementById("letters").appendChild(rowDiv);
+    });
 }
 
 function updateDisplayWord() {
@@ -56,6 +66,11 @@ function handleLetterClick(button, letter) {
         if (!chosenWord.includes(letter)) {
             attempts--;
             drawHangman(6 - attempts);
+
+            // Mostrar la pista después de cometer tres errores
+            if (attempts === 3) {
+                document.getElementById("hint").innerText = `Pista: ${chosenWordObj.hint}`;
+            }
         }
         updateDisplayWord();
         checkGameStatus();

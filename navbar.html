@@ -1,43 +1,88 @@
 <!-- navbar.html -->
 <style>
-    /* Asegúrate de que la página no tenga márgenes ni relleno */
-    body, html {
+    /* Estilos generales de navbar */
+    * {
         margin: 0;
         padding: 0;
-        width: 100%;
-        overflow-x: hidden; /* Evita cualquier desplazamiento horizontal */
+        box-sizing: border-box;
     }
 
-    /* Estilos del Navbar */
+    body, html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .navbar {
         display: flex;
         justify-content: center;
+        align-items: center;
         background-color: #ff4081;
         padding: 10px;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
+        width: 100vw;
         z-index: 10;
-        box-sizing: border-box;
     }
 
-    .nav-link {
+    .nav-link, .dropbtn {
         color: #ffffff;
         margin: 0 15px;
         text-decoration: none;
         font-size: 1.2em;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
-    .nav-link:hover {
+    .nav-link:hover, .dropdown:hover .dropbtn {
         color: #ffccde;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links dentro del dropdown */
+    .dropdown-content a {
+        color: #ff4081;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 1em;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Mostrar el dropdown al hacer hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 </style>
 
 <nav class="navbar">
     <a href="index.html" class="nav-link">Inicio</a>
-    <a href="hangman.html" class="nav-link">Juego de Ahorcado</a>
-    <a href="love_test.html" class="nav-link">Mini Test del Amor</a>
+    <div class="dropdown">
+        <button class="dropbtn">Juegos</button>
+        <div class="dropdown-content">
+            <a href="hangman.html">Juego de Ahorcado</a>
+            <a href="love_test.html">Mini Test del Amor</a>
+        </div>
+    </div>
 </nav>
 
 <script>
