@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío de Emoji</title>
+    <link rel="stylesheet" href="emoji_challenge.css">
+</head>
+<body>
+    <!-- Contenedor para el Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Contenedor principal del juego -->
+    <div class="game-container">
+        <h1>Desafío de Emoji 😄</h1>
+        <p id="emoji-sequence"></p>
+        <input type="text" id="answer-input" placeholder="Escribe tu respuesta aquí">
+        <button onclick="checkAnswer()">Enviar</button>
+        <p id="feedback"></p>
+        <button id="next-btn" onclick="loadNextEmoji()" style="display: none;">Siguiente</button>
+    </div>
+
+    <!-- Script para cargar el navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+    </script>
+
+    <script src="emoji_challenge.js"></script>
+</body>
+</html>

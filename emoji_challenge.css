@@ -1,0 +1,67 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff7f8;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#emoji-sequence {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+#answer-input {
+    padding: 10px;
+    font-size: 1em;
+    width: calc(100% - 22px);
+    border: 2px solid #ff69b4;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e33771;
+}
+
+#feedback {
+    font-size: 1.2em;
+    color: #ff4081;
+    margin-top: 20px;
+}
+
+#next-btn {
+    display: none;
+}

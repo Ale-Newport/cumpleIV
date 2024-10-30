@@ -1,7 +1,13 @@
 const words = [
     { word: "jappy", hint: "el nombre de uno de mis primeros regalos" },
     { word: "paris", hint: "primer viaje solos" },
-    { word: "pupu", hint: "apodo que me quieres llamar" }
+    { word: "pupu", hint: "apodo que me quieres llamar" },
+    { word: "ivana", hint: "lo que estoy pensando ahora mismo" },
+    { word: "", hint: "" },
+    { word: "", hint: "" },
+    { word: "", hint: "" },
+    { word: "", hint: "" },
+    { word: "", hint: "" }
 ];
 let chosenWordObj, chosenWord, displayWord, attempts, guessedLetters;
 
