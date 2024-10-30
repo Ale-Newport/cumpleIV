@@ -1,5 +1,51 @@
+<!-- navbar.html -->
+<style>
+    /* Asegúrate de que la página no tenga márgenes ni relleno */
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden; /* Evita cualquier desplazamiento horizontal */
+    }
+
+    /* Estilos del Navbar */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        background-color: #ff4081;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        box-sizing: border-box;
+    }
+
+    .nav-link {
+        color: #ffffff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+
+    .nav-link:hover {
+        color: #ffccde;
+    }
+</style>
+
 <nav class="navbar">
     <a href="index.html" class="nav-link">Inicio</a>
     <a href="hangman.html" class="nav-link">Juego de Ahorcado</a>
     <a href="love_test.html" class="nav-link">Mini Test del Amor</a>
 </nav>
+
+<script>
+    // Script para cargar el navbar en cada página
+    document.addEventListener("DOMContentLoaded", function() {
+        const navbarPlaceholder = document.getElementById("navbar-placeholder");
+        if (navbarPlaceholder) {
+            navbarPlaceholder.innerHTML = document.documentElement.innerHTML;
+        }
+    });
+</script>

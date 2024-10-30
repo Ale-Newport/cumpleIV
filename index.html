@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Barra de Navegación -->
-    <nav class="navbar">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="hangman.html" class="nav-link">Juego de Ahorcado</a>
-        <a href="love_test.html" class="nav-link">Mini Test del Amor</a>
-    </nav>
+    <!-- Contenedor para cargar el navbar -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Contenido Principal -->
     <h1>Feliz Cumpleaños, mi amor 🎉💕</h1>
 
-    <!-- Script de la animación -->
+    <!-- Script para cargar el archivo `navbar.html` -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+    </script>
+
+    <!-- Script para la animación de corazones -->
     <script src="script.js"></script>
 </body>
 </html>

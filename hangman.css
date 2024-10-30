@@ -1,32 +1,130 @@
-body {
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #fbeaec;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .game-container {
+    width: 90%;
+    max-width: 400px;
     text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 60px; /* Espacio para el navbar fijo */
 }
 
+/* Título del juego */
 h1 {
     color: #ff4081;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Canvas del ahorcado */
+#hangmanCanvas {
+    margin: 10px auto;
+    display: block;
+    background-color: #f3f3f3;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Pista y palabra */
+#hint {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
 }
 
 #wordDisplay {
-    font-size: 2em;
-    letter-spacing: 0.5em;
+    font-size: 1.6em;
+    letter-spacing: 0.4em;
+    margin: 20px 0;
+    color: #333;
 }
 
-#letters button {
-    font-size: 1.5em;
-    margin: 5px;
-}
-
+/* Mensaje de estado */
 #message {
     font-size: 1.2em;
     color: #ff4081;
-    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Letras */
+#letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+#letters button {
+    background-color: #ff4081;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#letters button:disabled {
+    background-color: #ddd;
+    color: #888;
+    cursor: default;
+}
+
+#letters button:hover:not(:disabled) {
+    background-color: #e33771;
+}
+
+/* Botón de reinicio */
+#restartButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+#restartButton:hover {
+    background-color: #45a049;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #wordDisplay {
+        font-size: 1.4em;
+        letter-spacing: 0.3em;
+    }
+
+    #letters button {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    #restartButton {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
 }

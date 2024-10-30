@@ -3,14 +3,34 @@ const words = [
     { word: "felicidad", hint: "Estado ideal contigo" },
     { word: "abrazo", hint: "Nos encanta darlo" }
 ];
-let chosenWordObj = words[Math.floor(Math.random() * words.length)];
-let chosenWord = chosenWordObj.word;
-let displayWord = "_".repeat(chosenWord.length);
-let attempts = 6;
-let guessedLetters = [];
+let chosenWordObj, chosenWord, displayWord, attempts, guessedLetters;
 
-document.getElementById("wordDisplay").innerText = displayWord;
-document.getElementById("hint").innerText = `Pista: ${chosenWordObj.hint}`;
+function initializeGame() {
+    chosenWordObj = words[Math.floor(Math.random() * words.length)];
+    chosenWord = chosenWordObj.word;
+    displayWord = "_".repeat(chosenWord.length);
+    attempts = 6;
+    guessedLetters = [];
+
+    document.getElementById("wordDisplay").innerText = displayWord;
+    document.getElementById("hint").innerText = `Pista: ${chosenWordObj.hint}`;
+    document.getElementById("message").innerText = "";
+    document.getElementById("restartButton").style.display = "none";
+    document.getElementById("letters").innerHTML = "";
+
+    // Clear the canvas for a new game
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBaseStructure();
+
+    // Create letter buttons
+    for (let i = 0; i < 26; i++) {
+        const letter = String.fromCharCode(65 + i).toLowerCase();
+        const button = document.createElement("button");
+        button.innerText = letter;
+        button.onclick = () => handleLetterClick(button, letter);
+        document.getElementById("letters").appendChild(button);
+    }
+}
 
 function updateDisplayWord() {
     displayWord = chosenWord.split("").map(letter => guessedLetters.includes(letter) ? letter : "_").join(" ");
@@ -21,9 +41,11 @@ function checkGameStatus() {
     if (displayWord.split(" ").join("") === chosenWord) {
         document.getElementById("message").innerText = "¡Ganaste! 🥳";
         document.getElementById("letters").innerHTML = "";
+        document.getElementById("restartButton").style.display = "block"; // Show restart button
     } else if (attempts === 0) {
         document.getElementById("message").innerText = `Perdiste 😢. La palabra era: ${chosenWord}`;
         document.getElementById("letters").innerHTML = "";
+        document.getElementById("restartButton").style.display = "block"; // Show restart button
     }
 }
 
@@ -40,13 +62,8 @@ function handleLetterClick(button, letter) {
     }
 }
 
-const lettersContainer = document.getElementById("letters");
-for (let i = 0; i < 26; i++) {
-    const letter = String.fromCharCode(65 + i).toLowerCase();
-    const button = document.createElement("button");
-    button.innerText = letter;
-    button.onclick = () => handleLetterClick(button, letter);
-    lettersContainer.appendChild(button);
+function restartGame() {
+    initializeGame();
 }
 
 // Canvas Drawing Code for Hangman
@@ -126,5 +143,5 @@ function drawHangman(step) {
     }
 }
 
-// Draw the base structure once at the start
-drawBaseStructure();
+// Initialize the game when the page loads
+initializeGame();

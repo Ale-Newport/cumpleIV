@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,11 +6,11 @@
     <title>Juego de Ahorcado</title>
     <link rel="stylesheet" href="hangman.css">
 </head>
-
 <body>
     <!-- Contenedor para cargar el navbar -->
     <div id="navbar-placeholder"></div>
 
+    <!-- Contenido del Juego -->
     <div class="game-container">
         <h1>Juego de Ahorcado</h1>
         <canvas id="hangmanCanvas" width="200" height="200"></canvas>
@@ -20,7 +18,10 @@
         <p id="wordDisplay">_ _ _ _ _</p>
         <p id="message"></p>
         <div id="letters"></div>
+        <!-- Botón para reiniciar el juego -->
+        <button id="restartButton" onclick="restartGame()" style="display: none;">Nueva Palabra</button>
     </div>
+
     <!-- Script para cargar el navbar -->
     <script>
         fetch('navbar.html')
