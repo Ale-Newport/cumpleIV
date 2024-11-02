@@ -13,7 +13,7 @@ const words = [
     { word: "pelo", hint: "parte de tu cuerpo que no paro de tocar" },
     { word: "peluche", hint: "objeto que te hace recordar a mí" },
     { word: "amor", hint: "apodo que mas te llamo" },
-    { word: "canción", hint: "uno de mis ultimos regalos a ti" },
+    { word: "cancion", hint: "uno de mis ultimos regalos a ti" },
     { word: "perrito", hint: "animal que queremos adoptar algún día" },
     { word: "canteras", hint: "lugar donde nos gusta pasear" },
     { word: "abrazo", hint: "lo que siempre te quiero dar" },
