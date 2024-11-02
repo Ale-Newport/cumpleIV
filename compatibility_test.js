@@ -140,11 +140,11 @@ function showResults() {
     resultMessage.style.display = "block";
     
     if (correctAnswers === questions.length) {
-        resultMessage.innerText = "¡Son almas gemelas! 💖";
+        resultMessage.innerText = "¡Me conoces a la perfeccion! 💖";
     } else if (correctAnswers >= questions.length / 2) {
-        resultMessage.innerText = "¡Tienen una gran conexión! 😊";
+        resultMessage.innerText = "¡Sabes lo tuyo! 😊";
     } else {
-        resultMessage.innerText = "Aún tienen mucho que descubrir el uno del otro 💑";
+        resultMessage.innerText = "Te queda mucho por aprender";
     }
 
     document.getElementById("question-container").style.display = "none";
