@@ -3,12 +3,23 @@ const words = [
     { word: "paris", hint: "primer viaje solos" },
     { word: "pupu", hint: "apodo que me quieres llamar" },
     { word: "ivana", hint: "lo que estoy pensando ahora mismo" },
-    { word: "", hint: "" },
-    { word: "", hint: "" },
-    { word: "", hint: "" },
-    { word: "", hint: "" },
-    { word: "", hint: "" }
+    { word: "koala", hint: "mejor animal del mundo" },
+    { word: "pequeña", hint: "lo que eres tú" },
+    { word: "australia", hint: "viaje soñado" },
+    { word: "gerberas", hint: "primeras flores que te regale" },
+    { word: "disparar", hint: "la ultima accion de nuestro saludo" },
+    { word: "cookies", hint: "una postre que preparar juntos" },
+    { word: "deporte", hint: "habito que ambos deberismos hacer" },
+    { word: "pelo", hint: "parte de tu cuerpo que no paro de tocar" },
+    { word: "peluche", hint: "objeto que te hace recordar a mí" },
+    { word: "amor", hint: "apodo que mas te llamo" },
+    { word: "canción", hint: "uno de mis ultimos regalos a ti" },
+    { word: "perrito", hint: "animal que queremos adoptar algún día" },
+    { word: "canteras", hint: "lugar donde nos gusta pasear" },
+    { word: "abrazo", hint: "lo que siempre te quiero dar" },
+    { word: "discutir", hint: "algo que deberiamos hacer menos" },
 ];
+
 let chosenWordObj, chosenWord, displayWord, attempts, guessedLetters;
 
 function initializeGame() {

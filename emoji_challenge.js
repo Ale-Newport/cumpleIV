@@ -1,10 +1,10 @@
 const emojiChallenges = [
-    { emojis: "🍕❤️🍔", answer: "Amor por la comida" },
+    { emojis: "", answer: "" },
     { emojis: "🏖️🌅", answer: "Vacaciones en la playa" },
     { emojis: "🎥🍿", answer: "Noche de cine" },
     { emojis: "🎂🎉", answer: "Cumpleaños" },
     { emojis: "🌹💕", answer: "Amor y flores" },
-    { emojis: "✈️🇯🇵", answer: "Viaje a Japón" },
+    { emojis: "✈️🇦🇺", answer: "Viaje a Japón" },
     { emojis: "🏠🍝❤️", answer: "Cena en casa" },
 ];
 

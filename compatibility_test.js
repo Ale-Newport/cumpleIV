@@ -1,25 +1,96 @@
 const questions = [
     {
-        question: "¿Cuál es la comida favorita del otro?",
-        answers: ["Pizza", "Sushi", "Hamburguesa", "Tacos"],
-        correct: "Pizza"
+        question: "¿Cuál es mi comida favorita?",
+        answers: ["tortilla", "tostada", "hamburguesa", "queque"],
+        correct: "tortilla"
     },
     {
-        question: "¿Qué prefieren para una cita?",
-        answers: ["Cine", "Cena", "Paseo al aire libre", "Concierto"],
-        correct: "Cena"
+        question: "¿Qué prefiero para una cita?",
+        answers: ["cena", "cine", "paseo", "concierto"],
+        correct: "cine"
     },
     {
-        question: "¿A qué país les gustaría viajar juntos?",
-        answers: ["Japón", "Francia", "Italia", "Brasil"],
-        correct: "Italia"
+        question: "¿A dónde me gustaría viajar contigo?",
+        answers: ["japón", "francia", "italia", "US"],
+        correct: "US"
     },
     {
-        question: "¿Qué actividad prefieren hacer juntos?",
-        answers: ["Ver una serie", "Salir a caminar", "Jugar videojuegos", "Ir al gimnasio"],
-        correct: "Ver una serie"
+        question: "¿Qué actividad prefiero hacer contigo?",
+        answers: ["ver una serie", "salir a caminar", "jugar videojuegos", "ir al gimnasio"],
+        correct: "jugar videojuegos"
+    },
+    {
+        question: "¿Qué tipo de películas prefiero?",
+        answers: ["terror", "comedia", "ciencia ficción", "acción"],
+        correct: "comedia"
+    },
+    {
+        question: "¿Cuál es mi color favorito?",
+        answers: ["azul", "rojo", "verde", "morado"],
+        correct: "azul"
+    },
+    {
+        question: "¿Cuál es mi estación del año favorita?",
+        answers: ["verano", "invierno", "primavera", "otoño"],
+        correct: "verano"
+    },
+    {
+        question: "¿Cuál es mi bebida favorita?",
+        answers: ["zumo de naranja", "leche", "agua", "zumo de melocoton"],
+        correct: "agua"
+    },
+    {
+        question: "¿Qué prefiero hacer en mi tiempo libre?",
+        answers: ["hablar contigo", "ver películas", "jugar a videojuegos", "hacer ejercicio"],
+        correct: "ver películas"
+    },
+    {
+        question: "¿Cuál es mi sabor de helado favorito?",
+        answers: ["chocolate", "vainilla", "kinder", "ferrero"],
+        correct: "kinder"
+    },
+    {
+        question: "¿Qué prefiero para el desayuno?",
+        answers: ["tortitas", "huevos", "tostadas", "fruta"],
+        correct: "tortitas"
+    },
+    {
+        question: "¿Qué mascota me gustaría tener?",
+        answers: ["perro", "gato", "pez", "turtuga"],
+        correct: "perro"
+    },
+    {
+        question: "¿Cuál es mi actividad favorita al aire libre?",
+        answers: ["ir a la playa", "hacer deporte", "dar un paseo", "ver las estrellas"],
+        correct: "hacer deporte"
+    },
+    {
+        question: "¿Qué prefiero para relajarme?",
+        answers: ["que me den un masaje", "tomar un baño", "ver una serie", "gritar"],
+        correct: "tomar un baño"
+    },
+    {
+        question: "¿Cuál es mi género de música favorito?",
+        answers: ["pop", "rock", "requeton", "ninguno"],
+        correct: "ninguno"
+    },
+    {
+        question: "¿Qué prefiero comer de postre?",
+        answers: ["tarta", "galletas", "helado", "fruta"],
+        correct: "tarta"
+    },
+    {
+        question: "¿Cuál es mi flor favorita?",
+        answers: ["rosa", "lirio", "girasol", "gerbera"],
+        correct: "girasol"
+    },
+    {
+        question: "¿Cuál es mi deporte favorito?",
+        answers: ["fútbol", "ping pong", "padel", "baloncesto"],
+        correct: "baloncesto"
     }
 ];
+
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
